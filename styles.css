@@ -1,3 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    font-weight: 100;
+    scroll-behavior: smooth;
+}
+
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,9 +24,70 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+#title {
+    font-size: 1.8rem;
+    font-family: 'Gugi', cursive;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+.about {
+    background-color: aliceblue;
+}
+
+.about div {
+    margin: 5%;
+}
+
+section {
+    width: 100%;
+    min-height: 105vh;
+    display: flex;
+    justify-content: left;
+}
+
 h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 5rem;
     text-align: center;
-    color: #333;
+    line-height: 2;
+    color: #333
+    /* font-weight: bold; */
+}
+
+h2 {
+    font-size: 2.2rem;
+}
+
+p {
+    font-size: 1.5rem;
+}
+
+nav {
+    height: 64px;
+    width: 100%;
+    background-color: black;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: 10;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin: 30px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
 }
 
 .team-member {
@@ -42,4 +113,12 @@ h1 {
 .team-member p {
     margin: 0;
     color: #666;
+}
+
+.contact {
+    background-color: white;
+}
+
+.contact div {
+    margin: 5%;
 }
