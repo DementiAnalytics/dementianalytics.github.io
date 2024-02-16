@@ -1,2 +1,3 @@
-# DementiAnalytics.github.io
-Website to show what our team are doing, and our vision for the projects and goals.
+# dementianalytics.github.io
+
+Website hosted by GitHub pages to show what our team are doing, and our vision and goals for the projects.
