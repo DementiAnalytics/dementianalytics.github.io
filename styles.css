@@ -7,44 +7,11 @@
     scroll-behavior: smooth;
 }
 
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
-
-.container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-#title {
-    font-size: 1.8rem;
-    font-family: 'Gugi', cursive;
-    text-transform: capitalize;
-    text-decoration: none;
-    color: white;
-}
-
-.about {
-    background-color: aliceblue;
-}
-
-.about div {
-    margin: 5%;
-}
-
 section {
     width: 100%;
     min-height: 105vh;
     display: flex;
-    justify-content: left;
+    justify-content: center;
 }
 
 h1 {
@@ -52,17 +19,31 @@ h1 {
     font-size: 5rem;
     text-align: center;
     line-height: 2;
-    color: #333
+    color: #333;
     /* font-weight: bold; */
 }
 
 h2 {
-    font-size: 2.2rem;
+    font-family: 'Gugi', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    line-height: 2;
+    color: #333;
+}
+
+h3 {
+    font-family: 'Gugi', cursive;
+    font-size: 2.0rem;
+    text-align: center;
+    line-height: 2;
+    color: #333;
 }
 
 p {
     font-size: 1.5rem;
 }
+
+/* Navigation Bar section */
 
 nav {
     height: 64px;
@@ -90,19 +71,70 @@ nav ul li a{
     color: white;
 }
 
+#title {
+    font-size: 1.8rem;
+    font-family: 'Gugi', cursive;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white;
+}
+
+/* Website content section */
+
+.container {
+    width: 100%;
+    min-height: 0 20px;
+    justify-content: left;
+}
+
+/* Initial-grid section */
+
+.initial-grid {
+    background-color: aliceblue;
+    padding: 50px;
+    justify-content: center;
+}
+
+/* About the organization section */
+
+.about-org {
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-org p {
+    text-align: left;
+    margin: 20px;
+    padding: 20px;
+}
+
+/* team-member section */
+
 .team-member {
+    background-color: aliceblue;
     margin-bottom: 20px;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.team-member img {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    margin-right: 20px;
-    float: left;
+.team-member div {
+    margin: 5%;
+    display: block;
+}
+
+.team-member h1 {
+    font-family: 'Gugi', cursive;
+    font-size: 5rem;
+    line-height: 2;
 }
 
 .team-member h2 {
@@ -115,10 +147,52 @@ nav ul li a{
     color: #666;
 }
 
+.team-member img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-right: 20px;
+    float: left;
+}
+
+
+/* Contact section */
+
 .contact {
     background-color: white;
 }
 
 .contact div {
     margin: 5%;
+}
+
+.contact img{
+    width: 50px;
+    margin: 10px;
+}
+
+
+/* About us */
+
+.about-us {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.about-us div {
+    margin: 10px;
+    padding: 10px;
+    width: calc(33.33% - 20px);
+    display: block;
+}
+
+.about-us div h3 {
+    margin-bottom: 10px;
+}
+
+.about-us div p {
+    margin: 10px;
+    padding: 10px;
+    text-align: left;
 }

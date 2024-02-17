@@ -1,2 +1,3 @@
 # DementiAnalytics.github.io
-Website to show what our team are doing, and our vision for the projects and goals.
+
+Website to show general information about our team's vision and goals. We also display the snap of the application we are working on.
