@@ -7,37 +7,38 @@
 body, html {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    background: #fff; /* Clean background */
-    line-height: 1.6; /* More readable line height */
+    background: #fff; /* White background */
+    color: #333; /* Dark gray text for readability */
 }
 
 header {
     width: 100%;
     position: fixed;
     top: 0;
-    background: #0056b3; /* A fresh, modern blue */
-    color: #fff;
+    background: #00A1CB; /* Light blue from the logo */
+    color: #fff; /* White text */
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Slightly deeper shadow for depth */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 0.5rem 0; /* Reduced vertical padding */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 10%; /* More horizontal padding for a wider look */
+    padding: 0 10%;
 }
 
 .nav-links a {
-    margin: 0 20px; /* More space between nav items */
+    margin: 0 20px;
     text-decoration: none;
-    color: #fff;
-    font-weight: 500; /* Slightly bolder */
+    color: #fff; /* White text for navigation links */
+    font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffd700; /* A gold color on hover for a premium feel */
+    color: #D1ECF1; /* Lighter blue for hover effect */
 }
 
 .hero-section {
@@ -46,52 +47,53 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #e0e0e0; /* Neutral background */
-    padding: 0 10%; /* Padding on the sides */
+    background-color: #D1ECF1; /* Light blue background for hero section */
+    color: #333; /* Dark text on light background */
+    padding: 0 10%;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem; /* Larger font size for the main title */
-    color: #333; /* Darker color for contrast */
-    margin-bottom: 0.5em;
+    font-size: 3rem; /* Large font size for impact */
+    margin-bottom: 0.5rem;
 }
 
 .hero-content p {
-    font-size: 1.2rem; /* Larger text for the subtitle */
-    color: #555; /* Subtle color for the description */
-    max-width: 600px; /* Max width for optimal reading length */
+    font-size: 1.5rem; /* Readable font size for subtitle */
+    max-width: 600px;
+    margin-bottom: 2rem;
 }
 
-/* Sections */
+/* Other sections */
 section {
-    padding: 4rem 10%; /* Uniform padding for all sections */
+    padding: 4rem 10%;
+    background-color: #fff; /* White background for content sections */
 }
 
 h2 {
-    font-size: 2rem; /* Uniform size for section headings */
-    color: #333; /* Dark color for headings */
-    margin-bottom: 1em;
+    font-size: 2.25rem;
+    color: #00A1CB; /* Light blue color for headings */
+    margin-bottom: 1rem;
 }
 
 .team-container {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Wrap for responsiveness */
-    gap: 30px; /* Space between team cards */
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .team-member {
-    background: #f9f9f9; /* Light background for team cards */
+    background: #f9f9f9; /* Light gray background for team cards */
     padding: 2rem;
     border-radius: 10px;
-    width: 250px; /* Fixed width for cards */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
-    text-align: left; /* Align text to the left for content */
+    width: 250px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
 }
 
 .team-member h3 {
-    font-size: 1.4rem; /* Size for team member names */
-    color: #0056b3; /* Match the header color */
+    font-size: 1.5rem;
+    color: #00A1CB; /* Light blue color for team member names */
     margin-bottom: 0.5rem;
 }
 
@@ -105,11 +107,11 @@ h2 {
     .nav-links {
         flex-direction: column;
         align-items: flex-start;
-        padding-top: 60px; /* Space for the dropdown on mobile */
+        padding-top: 60px;
     }
 
     .nav-links a {
-        margin-bottom: 1rem; /* Space between items when stacked */
+        margin-bottom: 1rem;
     }
 
     .team-container {
@@ -118,14 +120,14 @@ h2 {
     }
 
     .team-member {
-        width: 80%; /* More width for mobile */
+        width: 80%;
     }
 
     .hero-content h1 {
-        font-size: 2rem; /* Slightly smaller on mobile */
+        font-size: 2rem;
     }
 
     .hero-content p {
-        font-size: 1rem; /* Slightly smaller on mobile */
+        font-size: 1rem;
     }
 }
