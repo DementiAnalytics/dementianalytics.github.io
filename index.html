@@ -3,82 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Medical Team Information</title>
+    <title>DementiAnalytics</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
 <header>
-    <nav>
-        <a id="title" href="#home">DementiAnalytics</a>
-        <ul>
-            <li><a href="#about-org">About</a></li>
-            <li><a href="#team-member">Team Members</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+    <nav class="navbar">
+        <a href="#home" class="logo">DementiAnalytics</a>
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#team">Team</a>
+            <a href="#contact">Contact</a>
+        </div>
     </nav>
 </header>
 
-<main class="container">
-    <section id="home" class="initial-grid">
+<main>
+    <section id="home" class="hero-section">
         <h1>Welcome to DementiAnalytics</h1>
         <p>Leading the way in early dementia detection technology.</p>
     </section>
 
-    <section id="about-org" class="about-org">
+    <section id="about" class="about-section">
         <h2>Early Dementia Detection</h2>
-        <p>Our technology gathers real-time data to aid healthcare professionals in diagnosing Alzheimer’s disease and other dementia-related disorders...</p>
+        <p>Our technology gathers real-time data to aid healthcare professionals...</p>
     </section>
 
-    <section id="team-member" class="team-member">
+    <section id="team" class="team-section">
         <h2>Our Team</h2>
-        <div class="team-container">
-            <div class="team-card">
+        <div class="team-slider">
+            <!-- Example for a single team member; replicate as needed -->
+            <div class="team-member">
                 <h3>Kevin Mekulu</h3>
-                <p>The Pennsylvania State University</p>
                 <p>PhD Candidate, Industrial Engineering</p>
             </div>
-
-            <div class="team-card">
-                <h3>Dana Kazerooni</h3>
-                <p>Business Development</p>
-            </div>
-    
-            <div class="team-card">
-                <h3>Arm Mattra</h3>
-                <p>The Pennsylvania State University</p>
-                <p>Undergraduate Student, Computer Engineering</p>
-            </div>
+            <!-- Additional team members here -->
         </div>
     </section>
     
-    <section id="contact" class="contact">
+    <section id="contact" class="contact-section">
         <h2>Contact Us</h2>
-        <p>Get in touch to learn more about how our technology can help in the early detection of dementia.</p>
+        <p>Get in touch to learn more about how our technology can help.</p>
     </section>
-
-    <section id="about-us" class="about-us">
-        <article>
-            <h3>About Us</h3>
-            <p>Formed by a shared vision of a future where early dementia diagnosis is swift and effective...</p>
-        </article>
-
-        <article>
-            <h3>Our Mission</h3>
-            <p>Empowering healthcare professionals to revolutionize early-stage dementia detection for improved patient outcomes.</p>
-        </article>
-
-        <article>
-            <h3>Our Sponsors</h3>
-            <ul>
-                <li>NSF</li>
-                <li>Microsoft</li>
-                <li>The Pennsylvania State University</li>
-            </ul>
-        </article>
-    </section>
-
 </main>
 
 </body>
