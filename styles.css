@@ -7,90 +7,125 @@
 body, html {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    background: #fff; /* Set a default background color */
-    color: #333; /* Default text color */
+    background: #fff; /* Clean background */
+    line-height: 1.6; /* More readable line height */
 }
 
 header {
     width: 100%;
     position: fixed;
     top: 0;
-    background: #0056b3; /* Updated to a solid color for a modern look */
-    color: #fff; /* Light text on dark background for the header */
+    background: #0056b3; /* A fresh, modern blue */
+    color: #fff;
     z-index: 1000;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Slightly deeper shadow for depth */
 }
 
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 5%;
+    padding: 1rem 10%; /* More horizontal padding for a wider look */
 }
 
 .nav-links a {
-    margin: 0 15px;
+    margin: 0 20px; /* More space between nav items */
     text-decoration: none;
-    color: #fff; /* Ensuring readability on the dark background */
-    font-weight: 400;
-    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    color: #fff;
+    font-weight: 500; /* Slightly bolder */
+    transition: color 0.3s ease;
 }
 
 .nav-links a:hover {
-    color: #ffe600; /* Highlight color for hover state */
-}
-
-.hero-section, .about-section, .team-section, .contact-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    text-align: center;
+    color: #ffd700; /* A gold color on hover for a premium feel */
 }
 
 .hero-section {
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
-    background: #e0e0e0; /* Placeholder background color */
+    align-items: center;
+    background-color: #e0e0e0; /* Neutral background */
+    padding: 0 10%; /* Padding on the sides */
+}
+
+.hero-content h1 {
+    font-size: 2.5rem; /* Larger font size for the main title */
+    color: #333; /* Darker color for contrast */
+    margin-bottom: 0.5em;
+}
+
+.hero-content p {
+    font-size: 1.2rem; /* Larger text for the subtitle */
+    color: #555; /* Subtle color for the description */
+    max-width: 600px; /* Max width for optimal reading length */
+}
+
+/* Sections */
+section {
+    padding: 4rem 10%; /* Uniform padding for all sections */
+}
+
+h2 {
+    font-size: 2rem; /* Uniform size for section headings */
+    color: #333; /* Dark color for headings */
+    margin-bottom: 1em;
 }
 
 .team-container {
     display: flex;
-    gap: 20px;
-    padding: 20px;
+    justify-content: center;
+    flex-wrap: wrap; /* Wrap for responsiveness */
+    gap: 30px; /* Space between team cards */
 }
 
 .team-member {
-    flex: none;
-    width: 200px;
-    background: #f4f4f4; /* Slightly different background for card */
-    padding: 20px;
+    background: #f9f9f9; /* Light background for team cards */
+    padding: 2rem;
     border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
+    width: 250px; /* Fixed width for cards */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Subtle shadow */
+    text-align: left; /* Align text to the left for content */
 }
 
-/* Smooth scrolling */
-html {
-    scroll-behavior: smooth;
+.team-member h3 {
+    font-size: 1.4rem; /* Size for team member names */
+    color: #0056b3; /* Match the header color */
+    margin-bottom: 0.5rem;
 }
 
-/* Responsive design for smaller screens */
-@media screen and (max-width: 768px) {
+.team-member p {
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
     .nav-links {
-        display: flex;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
+        padding-top: 60px; /* Space for the dropdown on mobile */
     }
-    
+
+    .nav-links a {
+        margin-bottom: 1rem; /* Space between items when stacked */
+    }
+
     .team-container {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .team-member {
-        width: auto; /* Full width on smaller screens */
+        width: 80%; /* More width for mobile */
+    }
+
+    .hero-content h1 {
+        font-size: 2rem; /* Slightly smaller on mobile */
+    }
+
+    .hero-content p {
+        font-size: 1rem; /* Slightly smaller on mobile */
     }
 }
