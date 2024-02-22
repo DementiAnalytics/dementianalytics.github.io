@@ -7,13 +7,16 @@
 body, html {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+    background: #fff; /* Set a default background color */
+    color: #333; /* Default text color */
 }
 
 header {
     width: 100%;
     position: fixed;
     top: 0;
-    background: #fff;
+    background: #0056b3; /* Updated to a solid color for a modern look */
+    color: #fff; /* Light text on dark background for the header */
     z-index: 1000;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -28,8 +31,13 @@ header {
 .nav-links a {
     margin: 0 15px;
     text-decoration: none;
-    color: #333;
+    color: #fff; /* Ensuring readability on the dark background */
     font-weight: 400;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.nav-links a:hover {
+    color: #ffe600; /* Highlight color for hover state */
 }
 
 .hero-section, .about-section, .team-section, .contact-section {
@@ -42,14 +50,15 @@ header {
 }
 
 .hero-section {
-    min-height: 100vh;
-    background: url('hero-background.jpg') no-repeat center center/cover;
-    color: #fff;
+    min-height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e0e0e0; /* Placeholder background color */
 }
 
-.team-slider {
+.team-container {
     display: flex;
-    overflow-x: auto;
     gap: 20px;
     padding: 20px;
 }
@@ -57,9 +66,10 @@ header {
 .team-member {
     flex: none;
     width: 200px;
-    background: #f4f4f4;
+    background: #f4f4f4; /* Slightly different background for card */
     padding: 20px;
     border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Soft shadow for depth */
 }
 
 /* Smooth scrolling */
@@ -67,7 +77,7 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Responsive design */
+/* Responsive design for smaller screens */
 @media screen and (max-width: 768px) {
     .nav-links {
         display: flex;
@@ -75,7 +85,12 @@ html {
         align-items: center;
     }
     
-    .team-slider {
+    .team-container {
         flex-direction: column;
+        align-items: center;
+    }
+    
+    .team-member {
+        width: auto; /* Full width on smaller screens */
     }
 }
