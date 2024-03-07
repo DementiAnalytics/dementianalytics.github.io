@@ -1,4 +1,4 @@
-DementiAnalytics.github.io
+
 This repository contains the source code for the DementiAnalytics team's website (https://DementiAnalytics.github.io)
 
 About the Website:
