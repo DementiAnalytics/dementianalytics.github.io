@@ -83,18 +83,21 @@ h2 {
 }
 
 .team-member {
-    background: #f9f9f9; /* Light gray background for team cards */
-    padding: 2rem;
+    display: flex; /* Added to align items vertically */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally */
+    background: #f9f9f9;
+    padding: 1rem; /* Adjust padding as needed */
     border-radius: 10px;
-    width: 250px;
+    width: 250px; /* Adjust width as needed */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: left;
+    text-align: center; /* Center text for consistency */
 }
 
 .team-member h3 {
     font-size: 1.5rem;
-    color: #00A1CB; /* Light blue color for team member names */
-    margin-bottom: 0.5rem;
+    color: #00A1CB;
+    margin-top: 20px; /* Adds space above the name */
 }
 
 .team-member p {
@@ -103,12 +106,14 @@ h2 {
 }
 
 .team-member-headshot {
-    width: 150px; /* any size you desire */
-    height: 150px; /* maintain the same value as width for a circle */
-    border-radius: 50%; /* creates a circle */
-    object-fit: cover; /* ensures the image covers the area without distortion */
-    margin-bottom: 20px; /* adds some space between the image and the text */
-    border: 3px solid #00A1CB; /* optional: adds a border color from your branding */
+    width: 100px; /* Adjust to fit within the card */
+    height: 100px; /* Maintain aspect ratio */
+    border-radius: 50%; 
+    object-fit: cover; 
+    margin-top: -50px; /* Pull the image up to sit on top of the card edge */
+    margin-bottom: 20px; 
+    border: 3px solid #fff; /* Change to white to create a 'bleed' effect against the card background */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow to the headshot */
 }
 
 
