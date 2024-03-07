@@ -102,6 +102,16 @@ h2 {
     color: #555;
 }
 
+.team-member-headshot {
+    width: 150px; /* any size you desire */
+    height: 150px; /* maintain the same value as width for a circle */
+    border-radius: 50%; /* creates a circle */
+    object-fit: cover; /* ensures the image covers the area without distortion */
+    margin-bottom: 20px; /* adds some space between the image and the text */
+    border: 3px solid #00A1CB; /* optional: adds a border color from your branding */
+}
+
+
 /* Responsive design */
 @media (max-width: 768px) {
     .nav-links {
