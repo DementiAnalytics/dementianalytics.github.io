@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+/*
+Color Pallete
+    - #F7F2F4
+    - #60BAD2
+    - #00A1CB
+    - #737B71
+    - #1E2031
+
+Font used:
+    - Roboto
+    - Courier New?
+*/
+
 body, html {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
@@ -27,6 +40,11 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 10%;
+}
+
+.nav-logo {
+    width: 100px;
+    height: 100px;
 }
 
 .nav-links a {
@@ -114,6 +132,21 @@ h2 {
     margin-bottom: 20px; 
     border: 3px solid #fff; /* Change to white to create a 'bleed' effect against the card background */
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow to the headshot */
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer div {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.footer-logo {
+    width: 100%;
+    height: 100%;
 }
 
 
