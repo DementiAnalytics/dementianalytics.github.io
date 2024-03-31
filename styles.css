@@ -29,7 +29,6 @@ header {
     position: fixed;
     top: 0;
     background: #00A1CB; /* Light blue from the logo */
-    color: #fff; /* White text */
     z-index: 1000;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding: 0.5rem 0; /* Reduced vertical padding */
@@ -39,18 +38,18 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
+    padding: 0 3%;
 }
 
 .nav-logo {
-    width: 100px;
-    height: 100px;
+    padding: 5px;
+    transform: scale(0.5);
 }
 
 .nav-links a {
     margin: 0 20px;
     text-decoration: none;
-    color: #fff; /* White text for navigation links */
+    color: #333; /* White text for navigation links */
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -65,9 +64,15 @@ header {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #D1ECF1; /* Light blue background for hero section */
-    color: #333; /* Dark text on light background */
+    /* background-color: #D1ECF1; /* Light blue background for hero section */
+    /* color: #333; /* Dark text on light background */
+    color: #F7F2F4;
+    text-shadow: -10px -10px 10 #000;/* Text shadow for*/
     padding: 0 10%;
+    background-image: url("images/medical-study.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 
 .hero-content h1 {
@@ -145,8 +150,8 @@ h2 {
 }
 
 .footer-logo {
-    width: 100%;
-    height: 100%;
+    transform: scale(0.5);
+    max-height: 20px;
 }
 
 
