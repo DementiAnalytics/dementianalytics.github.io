@@ -1,186 +1,227 @@
-* {
+/* Modern CSS for MCI Platform */
+
+:root {
+    --primary-color: #00A1CB;
+    --secondary-color: #1E2031;
+    --accent-color: #60BAD2;
+    --background-color: #F7F2F4;
+    --text-color: #333333;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-/*
-Color Pallete
-    - #F7F2F4
-    - #60BAD2
-    - #00A1CB
-    - #737B71
-    - #1E2031
-
-Font used:
-    - Roboto
-    - Courier New?
-*/
-
-body, html {
+  }
+  
+  body, html {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
-    background: #fff; /* White background */
-    color: #333; /* Dark gray text for readability */
-}
-
-header {
+    background: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  header {
     width: 100%;
     position: fixed;
     top: 0;
-    background: #00A1CB; /* Light blue from the logo */
+    background: var(--primary-color);
     z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    padding: 0.5rem 0; /* Reduced vertical padding */
-}
-
-.navbar {
+    box-shadow: var(--shadow);
+    padding: 1rem 0;
+    transition: all 0.3s ease;
+  }
+  
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 3%;
-}
-
-.nav-logo {
-    padding: 5px;
-    transform: scale(0.5);
-}
-
-.nav-links a {
-    margin: 0 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 5%;
+  }
+  
+  .nav-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .nav-links a {
     text-decoration: none;
-    color: #333; /* White text for navigation links */
+    color: white;
     font-weight: 500;
     transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #D1ECF1; /* Lighter blue for hover effect */
-}
-
-.hero-section {
+    position: relative;
+  }
+  
+  .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: white;
+    transition: width 0.3s ease;
+  }
+  
+  .nav-links a:hover::after {
+    width: 100%;
+  }
+  
+  .hero-section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    /* background-color: #D1ECF1; /* Light blue background for hero section */
-    /* color: #333; /* Dark text on light background */
-    color: #F7F2F4;
-    text-shadow: -10px -10px 10 #000;/* Text shadow for*/
+    color: white;
+    text-align: center;
     padding: 0 10%;
     background-image: url("images/medical-study.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}
-
-.hero-content h1 {
-    font-size: 3rem; /* Large font size for impact */
-    margin-bottom: 0.5rem;
-}
-
-.hero-content p {
-    font-size: 1.5rem; /* Readable font size for subtitle */
+    position: relative;
+  }
+  
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+  
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  .hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .hero-content p {
+    font-size: 1.5rem;
     max-width: 600px;
     margin-bottom: 2rem;
-}
-
-/* Other sections */
-section {
-    padding: 4rem 10%;
-    background-color: #fff; /* White background for content sections */
-}
-
-h2 {
-    font-size: 2.25rem;
-    color: #00A1CB; /* Light blue color for headings */
-    margin-bottom: 1rem;
-}
-
-.team-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-}
-
-.team-member {
-    display: flex; /* Added to align items vertically */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center items horizontally */
-    background: #f9f9f9;
-    padding: 1rem; /* Adjust padding as needed */
-    border-radius: 10px;
-    width: 250px; /* Adjust width as needed */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center; /* Center text for consistency */
-}
-
-.team-member h3 {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  }
+  
+  section {
+    padding: 6rem 10%;
+    background-color: white;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .team-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+  }
+  
+  .team-member {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-5px);
+  }
+  
+  .team-member h3 {
     font-size: 1.5rem;
-    color: #00A1CB;
-    margin-top: 20px; /* Adds space above the name */
-}
-
-.team-member p {
+    color: var(--primary-color);
+    margin: 1rem 0;
+  }
+  
+  .team-member p {
     font-size: 1rem;
-    color: #555;
-}
-
-.team-member-headshot {
-    width: 100px; /* Adjust to fit within the card */
-    height: 100px; /* Maintain aspect ratio */
-    border-radius: 50%; 
-    object-fit: cover; 
-    margin-top: -50px; /* Pull the image up to sit on top of the card edge */
-    margin-bottom: 20px; 
-    border: 3px solid #fff; /* Change to white to create a 'bleed' effect against the card background */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Optional: adds shadow to the headshot */
-}
-
-.footer {
+    color: var(--text-color);
+  }
+  
+  .team-member-headshot {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
+    margin-bottom: 1rem;
+  }
+  
+  .footer {
+    background-color: var(--secondary-color);
+    color: white;
+    padding: 3rem 10%;
     display: flex;
-    flex-direction: row;
-}
-
-.footer div {
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.footer-logo {
-    transform: scale(0.5);
-    max-height: 20px;
-}
-
-
-/* Responsive design */
-@media (max-width: 768px) {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .footer div {
+    margin: 1rem 0;
+  }
+  
+  .footer-logo {
+    height: 40px;
+    width: auto;
+  }
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
     .nav-links {
-        flex-direction: column;
-        align-items: flex-start;
-        padding-top: 60px;
+      flex-direction: column;
+      width: 100%;
+      padding-top: 1rem;
     }
-
+  
     .nav-links a {
-        margin-bottom: 1rem;
+      padding: 0.5rem 0;
     }
-
-    .team-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .team-member {
-        width: 80%;
-    }
-
+  
     .hero-content h1 {
-        font-size: 2rem;
+      font-size: 2.5rem;
     }
-
+  
     .hero-content p {
-        font-size: 1rem;
+      font-size: 1.2rem;
     }
-}
+  
+    .team-container {
+      grid-template-columns: 1fr;
+    }
+  
+    .footer {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
