@@ -8,7 +8,6 @@
     --text-color: #333333;
     --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
-  
   * {
     margin: 0;
     padding: 0;
@@ -30,7 +29,7 @@
     background: var(--primary-color);
     z-index: 1000;
     box-shadow: var(--shadow);
-    padding: 1rem 0;
+    padding: 0.5rem 0; /* Reduced padding */
     transition: all 0.3s ease;
   }
   
@@ -40,17 +39,20 @@
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 5%;
+    padding: 0 1rem; /* Reduced horizontal padding */
   }
   
+  
   .nav-logo {
-    height: 40px;
+    height: 40px; /* Fixed height */
     width: auto;
+    max-width: 200px; /* Limit maximum width */
+    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
   }
   
   .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: 1rem; /* Reduced gap */
   }
   
   .nav-links a {
@@ -194,16 +196,19 @@
   
   @media (max-width: 768px) {
     .navbar {
-      flex-direction: column;
-      align-items: flex-start;
+      flex-direction: row; /* Keep logo and links in a row */
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 1rem;
     }
-  
-    .nav-links {
-      flex-direction: column;
-      width: 100%;
-      padding-top: 1rem;
-    }
-  
+    .nav-logo {
+        height: 30px; /* Slightly smaller logo on mobile */
+        max-width: 150px; /* Limit width on mobile */
+      }
+    
+      .nav-links {
+        display: none; /* Hide links on mobile - consider adding a mobile menu */
+      }
     .nav-links a {
       padding: 0.5rem 0;
     }
