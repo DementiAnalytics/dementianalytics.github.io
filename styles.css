@@ -44,11 +44,17 @@
   
   
   .nav-logo {
-    height: 40px; /* Fixed height */
-    width: auto;
-    max-width: 200px; /* Limit maximum width */
-    object-fit: contain; /* Ensure the logo maintains its aspect ratio */
+    display: flex;
+    align-items: center;
   }
+
+  .nav-logo img {
+    height: 40px;
+    width: auto;
+    max-width: 200px;
+    object-fit: contain;
+  }
+  
   
   .nav-links {
     display: flex;
@@ -201,32 +207,18 @@
       align-items: center;
       padding: 0.5rem 1rem;
     }
-    .nav-logo {
-        height: 30px; /* Slightly smaller logo on mobile */
-        max-width: 150px; /* Limit width on mobile */
+
+    .nav-logo img {
+        height: 30px;
+        max-width: 150px;
       }
-    
-      .nav-links {
-        display: none; /* Hide links on mobile - consider adding a mobile menu */
-      }
+
+    .nav-links {
+        display: flex; /* Show links on mobile */
+        gap: 0.5rem;
+      }  
+      
     .nav-links a {
-      padding: 0.5rem 0;
-    }
-  
-    .hero-content h1 {
-      font-size: 2.5rem;
-    }
-  
-    .hero-content p {
-      font-size: 1.2rem;
-    }
-  
-    .team-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .footer {
-      flex-direction: column;
-      text-align: center;
+      padding: 0.9rem;
     }
   }
