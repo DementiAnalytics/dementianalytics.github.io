@@ -1,224 +1,277 @@
-/* Modern CSS for MCI Platform */
-
 :root {
-    --primary-color: #00A1CB;
-    --secondary-color: #1E2031;
-    --accent-color: #60BAD2;
-    --background-color: #F7F2F4;
-    --text-color: #333333;
-    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  body, html {
-    font-family: 'Roboto', sans-serif;
-    overflow-x: hidden;
-    background: var(--background-color);
-    color: var(--text-color);
-    line-height: 1.6;
-  }
-  
-  header {
-    width: 100%;
-    position: fixed;
-    top: 0;
-    background: var(--primary-color);
-    z-index: 1000;
-    box-shadow: var(--shadow);
-    padding: 0.5rem 0; /* Reduced padding */
-    transition: all 0.3s ease;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem; /* Reduced horizontal padding */
-  }
-  
-  
-  .nav-logo {
-    display: flex;
-    align-items: center;
-  }
+  --primary-color: #007AFF;
+  --secondary-color: #5AC8FA;
+  --background-color: #FFFFFF;
+  --text-color: #000000;
+  --light-gray: #F2F2F7;
+  --dark-gray: #8E8E93;
+  --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
 
-  .nav-logo img {
-    height: 40px;
-    width: auto;
-    max-width: 200px;
-    object-fit: contain;
-  }
-  
-  
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  font-family: 'San Francisco', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background: var(--background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: var(--shadow);
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.cta-button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: var(--secondary-color);
+}
+
+.hero-section {
+  background-color: var(--light-gray);
+  padding: 120px 0 80px;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 24px;
+  color: var(--dark-gray);
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.feature-grid, .benefit-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.feature, .benefit {
+  text-align: center;
+}
+
+.feature img, .benefit img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
+}
+
+.feature h3, .benefit h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p, .benefit p {
+  color: var(--dark-gray);
+}
+
+.about-section {
+  background-color: var(--light-gray);
+}
+
+.about-section p {
+  max-width: 800px;
+  margin: 0 auto 40px;
+  text-align: center;
+}
+
+.secondary-button {
+  display: inline-block;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 10px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.secondary-button:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.team-section {
+  background-color: white;
+}
+
+.team-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  text-align: center;
+  max-width: 250px;
+}
+
+.team-member-headshot {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.team-member h3 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.team-member p {
+  color: var(--dark-gray);
+}
+
+.contact-section {
+  background-color: var(--light-gray);
+  text-align: center;
+}
+
+.contact-section p {
+  max-width: 600px;
+  margin: 0 auto 40px;
+}
+
+footer {
+  background-color: var(--text-color);
+  color: white;
+  padding: 60px 0 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-logo img {
+  height: 40px;
+  width: auto;
+}
+
+.footer-mission, .footer-sponsors {
+  max-width: 300px;
+}
+
+.footer-mission h3, .footer-sponsors h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.footer-sponsors ul {
+  list-style: none;
+}
+
+.footer-sponsors li {
+  margin-bottom: 5px;
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
   .nav-links {
-    display: flex;
-    gap: 1rem; /* Reduced gap */
+    display: none;
   }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: white;
-    font-weight: 500;
-    transition: color 0.3s ease;
-    position: relative;
-  }
-  
-  .nav-links a::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 2px;
-    bottom: -5px;
-    left: 0;
-    background-color: white;
-    transition: width 0.3s ease;
-  }
-  
-  .nav-links a:hover::after {
-    width: 100%;
-  }
-  
-  .hero-section {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    text-align: center;
-    padding: 0 10%;
-    background-image: url("images/medical-study.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-    position: relative;
-  }
-  
-  .hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-  }
-  
-  .hero-content {
-    position: relative;
-    z-index: 2;
-  }
-  
+
   .hero-content h1 {
-    font-size: 3.5rem;
-    margin-bottom: 1rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    font-size: 36px;
   }
-  
+
   .hero-content p {
-    font-size: 1.5rem;
-    max-width: 600px;
-    margin-bottom: 2rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
   }
-  
-  section {
-    padding: 6rem 10%;
-    background-color: white;
-  }
-  
+
   h2 {
-    font-size: 2.5rem;
-    color: var(--primary-color);
-    margin-bottom: 2rem;
-    text-align: center;
+    font-size: 28px;
   }
-  
-  .team-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    justify-items: center;
+
+  .feature-grid, .benefit-container {
+    grid-template-columns: 1fr;
   }
-  
-  .team-member {
-    background: white;
-    padding: 2rem;
-    border-radius: 15px;
-    box-shadow: var(--shadow);
-    text-align: center;
-    transition: transform 0.3s ease;
-  }
-  
-  .team-member:hover {
-    transform: translateY(-5px);
-  }
-  
-  .team-member h3 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    margin: 1rem 0;
-  }
-  
-  .team-member p {
-    font-size: 1rem;
-    color: var(--text-color);
-  }
-  
-  .team-member-headshot {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--accent-color);
-    margin-bottom: 1rem;
-  }
-  
-  .footer {
-    background-color: var(--secondary-color);
-    color: white;
-    padding: 3rem 10%;
-    display: flex;
-    justify-content: space-between;
+
+  .footer-content {
+    flex-direction: column;
     align-items: center;
-    flex-wrap: wrap;
+    text-align: center;
   }
-  
-  .footer div {
-    margin: 1rem 0;
-  }
-  
-  .footer-logo {
-    height: 40px;
-    width: auto;
-  }
-  
-  @media (max-width: 768px) {
-    .navbar {
-      flex-direction: row; /* Keep logo and links in a row */
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-    }
-
-    .nav-logo img {
-        height: 30px;
-        max-width: 150px;
-      }
-
-    .nav-links {
-        display: flex; /* Show links on mobile */
-        gap: 0.5rem;
-      }  
-      
-    .nav-links a {
-      padding: 0.9rem;
-    }
-  }
+}
